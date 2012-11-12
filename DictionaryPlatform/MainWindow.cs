@@ -11,9 +11,17 @@ namespace DictionaryPlatform
 {
     public partial class MainWindow : Form
     {
+        ClipboardMonitor cm;
         public MainWindow()
         {
             InitializeComponent();
+            cm = new ClipboardMonitor();
+            cm.ClipboardChanged += cm_ClipboardChanged;
+        }
+
+        void cm_ClipboardChanged(object sender, ClipboardChangedEventArgs e)
+        {
+            Console.WriteLine(e.ClipboardContent);
         }
     }
 }
