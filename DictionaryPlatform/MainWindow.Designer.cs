@@ -1,6 +1,6 @@
 ﻿namespace DictionaryPlatform
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Erforderliche Designervariable.
